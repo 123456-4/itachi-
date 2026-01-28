@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Armstrong</title>
+  <title>ARMSTRONG</title>
   <style>
     body { font-family: Arial, sans-serif; text-align: center; background: #f0f8ff; color: #333; padding: 50px; }
     h1 { color: #0000ff; font-size: 48px; }
@@ -14,12 +14,68 @@
   </style>
 </head>
 <body>
-  <h1>Armstrong</h1>
-  <h2>Armstrong</h2>
-  <h3># Get Your Account Ready And Instantly.</h3>
+  <h1>ARMSTRONG</h1>
+  <h2>ARMSTRONG</h2>
+  <h3>Get Your Account Ready And Instantly.</h3>
   <p>Get your account ready and instantly start buying, selling airtime and data online and start paying all your bills in cheaper price.</p>
   <hr>
-  <!-- Change anything here: Add your own text, headings, or even a fake button (for learning only) -->
+
+  
+  <!-- Fake activation button - looks clickable and urgent -->
+  <button onclick="alert('Activation in progress... Contact support for BPC code!');" 
+          style="background: linear-gradient(#0000ff, #00008b); color: white; 
+                 padding: 18px 50px; font-size: 24px; font-weight: bold; 
+                 border: none; border-radius: 10px; cursor: pointer; 
+                 box-shadow: 0 8px 16px rgba(0,0,0,0.3); margin: 30px auto; display: block;">
+    ACTIVATE NOW - ₦10,000 Only!
+  </button>
+  
+  <p style="font-size: 18px; color: #d32f2f; font-weight: bold;">
+    Limited Offer: Activate today and start earning ₦200,000+ daily!
+  </p>
+  
+  <!-- Fake countdown timer for urgency (simple JS) -->
+  <div id="timer" style="font-size: 28px; color: #ff4500; margin: 30px 0; font-weight: bold;">
+    Offer ends in: <span id="countdown">Loading...</span>
+  </div>
+  
+  <script>
+    // Simple countdown (e.g., 24 hours from now)
+    let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
+    let x = setInterval(function() {
+      let now = new Date().getTime();
+      let distance = countDownDate - now;
+      let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("countdown").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+  
+  <!-- Fake testimonials section -->
+  <div style="max-width: 600px; margin: 40px auto; text-align: left;">
+    <h3 style="color: #0000ff; text-align: center;">What Users Are Saying</h3>
+    <p><strong>Chinedu O.</strong> - "Activated with ₦10k, now making ₦150k+ weekly! Real deal!"</p>
+    <p><strong>Aisha B.</strong> - "Fast airtime sales, cheap data. Best app in Naija!"</p>
+    <p><strong>Emeka F.</strong> - "Support gave me BPC code instantly. Thanks team!"</p>
+  </div>
+  
+  <!-- Contact section with fake WhatsApp/Telegram links (for learning only) -->
+  <div style="margin: 40px 0;">
+    <h3 style="color: #ff4500;">Contact Support for Activation</h3>
+    <p>WhatsApp: <a href="https://wa.me/2348130000000" target="_blank" style="color: #25D366; font-weight: bold;">+234 813 000 0000</a></p>
+    <p>Telegram: <a href="https://t.me/bluepay_support" target="_blank" style="color: #0088cc; font-weight: bold;">@bluepay_support</a></p>
+  </div>
+  
+  <p style="font-size: 16px; color: #666; margin-top: 50px;">
+    This is my custom version - edit me! (For learning web development only)
+  </p>
+</body>
+</html>
   <p>This is my custom version – edit me!</p>
 </body>
 </html>
